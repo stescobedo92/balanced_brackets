@@ -31,7 +31,9 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+        assert_eq!(balanced("()"), true);
+        assert_eq!(balanced("("), false);
+        assert_eq!(balanced("({}{}())"), true);
+        assert_eq!(balanced("({}{}()"), false);
     }
 }
